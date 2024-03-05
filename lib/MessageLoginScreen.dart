@@ -18,7 +18,7 @@ class _HomeScreenState extends State<MLScreen> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.black26,
-        title: Text(
+        title: const Text(
           "Let's Connect Via Message",
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
         ),
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<MLScreen> {
         actions: [
           Container(
             child: IconButton(
-              icon: Icon(Icons.info_outline),
+              icon: const Icon(Icons.info_outline),
               onPressed: () {},
             ),
           ),
@@ -42,29 +42,29 @@ class _HomeScreenState extends State<MLScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            padding: EdgeInsets.only(left: 20,right: 20),
+            padding: const EdgeInsets.only(left: 20,right: 20),
             child: TextFormField(
               controller: userId,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Enter User ID",
                 border: OutlineInputBorder()
               ),
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Container(
-            padding: EdgeInsets.only(left: 20,right: 20),
+            padding: const EdgeInsets.only(left: 20,right: 20),
             child: TextFormField(
               controller: userName,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Enter User NAME",
                 border: OutlineInputBorder()
               ),
             ),
           ),
-          SizedBox(height: 30,),
+          const SizedBox(height: 30,),
           ElevatedButton(
-            child: Text("Login"),
+            child: const Text("Login"),
             onPressed: () async{
               ZIMKit().connectUser(id: userId.text,name: userName.text);
               Navigator.popAndPushNamed(context, "mscreen");

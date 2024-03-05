@@ -13,7 +13,7 @@ class _MScreenState extends State<MScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Messages"),
+        title: const Text("Messages"),
         actions: [
           PopupMenuButton(
             position: PopupMenuPosition.under,
@@ -21,7 +21,7 @@ class _MScreenState extends State<MScreen> {
               return [
                 PopupMenuItem(
                   value: "New Chat",
-                  child: ListTile(
+                  child: const ListTile(
                     leading: Icon(Icons.add_circle_rounded),
                     title: Text(
                       "New Chat",
@@ -32,7 +32,7 @@ class _MScreenState extends State<MScreen> {
                 ),
                 PopupMenuItem(
                   value: "New Group Chat",
-                  child: ListTile(
+                  child: const ListTile(
                     leading: Icon(Icons.add_circle_rounded),
                     title: Text(
                       "New Group Chat",
